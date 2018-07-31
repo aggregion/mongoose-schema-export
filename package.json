@@ -1,6 +1,6 @@
 {
   "name": "@aggregion/mongoose-schema-export",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tool for exporting mongoose models schemas to various formats.",
   "keywords": [
     "mongoose",
