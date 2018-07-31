@@ -1,0 +1,53 @@
+{
+  "extends": "google",
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "max-len": [1, {"code": 200, "tabWidth": 2, "ignoreUrls": true}],
+    "require-jsdoc": 0,
+    "max-nested-callbacks": [1, {"max": 9}],
+    "no-unused-expressions": 0,
+    "no-unused-vars": 2,
+    "array-callback-return": 0,
+    "handle-callback-err": 0,
+    "yoda": 0,
+    "quote-props": 0,
+    "no-negated-condition": 0,
+    "padded-blocks": 0,
+    "no-else-return": 0,
+    "no-path-concat": 0,
+    "key-spacing": 0,
+    "no-lonely-if": 0,
+    "no-use-before-define": 0,
+    "no-caller": 0,
+    "no-empty": 0,
+    "no-warning-comments": [0, {"terms": ["todo", "fixme", "xxx"], "location": "start"}],
+    "curly": 1,
+    "arrow-spacing": 2,
+    "space-before-blocks": [1, "always"],
+    "semi": 2,
+    "no-extra-semi": 2,
+    "arrow-parens": [2, "as-needed"],
+    "comma-dangle": [2, "never"],
+    "no-invalid-this": 0,
+    "no-multiple-empty-lines": ["error", {"max": 1}],
+    "no-space-before-semi": [0, "always"],
+    "newline-before-return": 0,
+    "space-before-keywords": [0, "always"],
+    "no-var": 0,
+    "quotes": [0, "single"],
+    "prefer-rest-params": 0,
+    "prefer-spread": 0,
+    "no-undef": 1
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "mongoose-schema-export",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "config": {
+    "test_timeout": 1000,
+    "test_path": "lib",
+    "test_ext": "spec.js"
+  },
+  "scripts": {
+    "lint": "eslint $npm_package_config_test_path && eslint src && echo '\\033[0;32mSuccess!\\033[0m\\n'",
+    "lint-n-fix": "eslint --fix $npm_package_config_test_path && eslint --fix src",
+    "test": "run() { if [ -z $1 ]; then npm run test-path \"$npm_package_config_test_path/**/*.$npm_package_config_test_ext\"; else for i; do npm run test-path \"$npm_package_config_test_path/$i/**/*.$npm_package_config_test_ext\"; done; fi;}; run",
+    "test-path": "NODE_ENV=test mocha --recursive --timeout=$npm_package_config_test_timeout --exit --reporter=spec",
+    "coverage": "nyc npm test && nyc report --reporter=text-summary",
+    "report": "nyc report && nyc report --reporter=text-summary && nyc report --reporter=lcov && python -mwebbrowser coverage/lcov-report/index.html"
+  },
+  "bin": {
+    "mongoose-schema-export": "./bin/export.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "eslint-config-google": "0.9.1",
+    "mocha": "5.2.0",
+    "mongoose": "5.1.5",
+    "nyc": "12.0.2"
+  },
+  "dependencies": {
+    "ejs": "2.6.1",
+    "glob": "7.1.2",
+    "jszip": "3.1.5",
+    "string-pixel-width": "1.7.0",
+    "xmldom": "0.1.27",
+    "yargs": "11.0.0"
+  }
+}
