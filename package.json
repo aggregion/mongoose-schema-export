@@ -1,7 +1,14 @@
 {
   "name": "@aggregion/mongoose-schema-export",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tool for exporting mongoose models schemas to various formats.",
+  "keywords": [
+    "mongoose",
+    "drawio",
+    "schema",
+    "export",
+    "cli"
+  ],
   "main": "lib/index.js",
   "config": {
     "test_timeout": 1000,
